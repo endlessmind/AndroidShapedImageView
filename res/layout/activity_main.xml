@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="2"
+    tools:context="com.example.androidshapedimageview.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shape set by XML. Down allow custom shapes!"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <com.example.androidshapedimageview.View.ShapeImageView
+            android:id="@+id/shapeImageView1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/android_blue"
+            app:border="true"
+			app:border_color="#eeeeee"
+			app:border_width="1dp"
+			app:shape="circular"
+			app:shadow="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        
+                <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shape set programmatically. Allow custom shapes!"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+                <com.example.androidshapedimageview.View.ShapeImageView
+            android:id="@+id/shapeImageView2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/android_blue"
+            app:border="true"
+			app:border_color="#eeeeee"
+			app:border_width="1dp"
+			app:shadow="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="4" >
+
+                    <Button
+                        android:id="@+id/btnCir"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Circular" />
+                    
+                                        <Button
+                        android:id="@+id/btnTri"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Triangle" />
+
+                    <Button
+                        android:id="@+id/btnHex"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hexagon" />
+
+                    <Button
+                        android:id="@+id/btnOct"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Octagon" />
+
+                </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>
