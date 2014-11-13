@@ -7,20 +7,10 @@ import com.example.androidshapedimageview.Classes.RenderShape;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Paint.Style;
-import android.graphics.Path;
-import android.graphics.Shader;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import android.graphics.Region;
-import android.media.ThumbnailUtils;
 
 public class ShapeImageView extends ImageView {
 	
@@ -55,6 +45,8 @@ public ShapeImageView(Context context, AttributeSet attrs, int defStyle) {
  			renderShape = new OctagonShape(this);
  		else if (shape.equals("hexagon"))
  			renderShape = new HexagonShape(this);
+ 		else if (shape.equals("triangle"))
+ 			renderShape = new TriangleShape(this);
 
  		loadAttributes();
  		
